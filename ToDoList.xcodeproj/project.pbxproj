@@ -19,6 +19,7 @@
 		04ED790F18C61E7200D7C5ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ED78F718C61E7200D7C5ED /* UIKit.framework */; };
 		04ED791718C61E7200D7C5ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04ED791518C61E7200D7C5ED /* InfoPlist.strings */; };
 		04ED791918C61E7200D7C5ED /* ToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED791818C61E7200D7C5ED /* ToDoListTests.m */; };
+		04ED792318C620B700D7C5ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04ED792218C620B700D7C5ED /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		04ED791418C61E7200D7C5ED /* ToDoListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToDoListTests-Info.plist"; sourceTree = "<group>"; };
 		04ED791618C61E7200D7C5ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04ED791818C61E7200D7C5ED /* ToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListTests.m; sourceTree = "<group>"; };
+		04ED792218C620B700D7C5ED /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				04ED790218C61E7200D7C5ED /* XYZAppDelegate.h */,
 				04ED790318C61E7200D7C5ED /* XYZAppDelegate.m */,
+				04ED792218C620B700D7C5ED /* Main.storyboard */,
 				04ED790518C61E7200D7C5ED /* Images.xcassets */,
 				04ED78FA18C61E7200D7C5ED /* Supporting Files */,
 			);
@@ -220,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04ED792318C620B700D7C5ED /* Main.storyboard in Resources */,
 				04ED78FE18C61E7200D7C5ED /* InfoPlist.strings in Resources */,
 				04ED790618C61E7200D7C5ED /* Images.xcassets in Resources */,
 			);
