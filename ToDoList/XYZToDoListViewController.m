@@ -18,15 +18,22 @@
 @implementation XYZToDoListViewController
 
 - (void)loadInitialData {
+    
     XYZToDoItem *item1 = [[XYZToDoItem alloc] init];
     item1.itemName = @"Buy Milk";
     [self.toDoItems addObject:item1];
+    
     XYZToDoItem *item2 = [[XYZToDoItem alloc] init];
     item2.itemName = @"Buy Eggs";
     [self.toDoItems addObject:item2];
+    
     XYZToDoItem *item3 = [[XYZToDoItem alloc] init];
     item3.itemName = @"Call John";
     [self.toDoItems addObject:item3];
+    
+    XYZToDoItem *item4 = [[XYZToDoItem alloc] init];
+    item4.itemName = @"Read a book";
+    [self.toDoItems addObject:item4];
 }
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
@@ -83,6 +90,14 @@
     // Configure the cell...
     XYZToDoItem *toDoItem = [self.toDoItems objectAtIndex:indexPath.row];
     cell.textLabel.text = toDoItem.itemName;
+    if (toDoItem.completed)
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     
     return cell;
 }
@@ -137,5 +152,16 @@
 }
 
  */
+
+#pragma mark - Table view delegation
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    XYZToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
+    tappedItem.completed = !tappedItem.completed;
+    [tableView reloadRowsAtIndexPaths:@[indexPath]
+                     withRowAnimation:UITableViewRowAnimationNone];
+}
 
 @end
